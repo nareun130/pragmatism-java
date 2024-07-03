@@ -1,4 +1,4 @@
-package com.nareun130.not_tda;
+package com.nareun130.pragmatism.tda.not;
 
 import lombok.Getter;
 import lombok.Setter;

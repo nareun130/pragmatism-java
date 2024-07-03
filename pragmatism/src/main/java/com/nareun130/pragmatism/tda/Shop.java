@@ -1,4 +1,4 @@
-package com.nareun130.tda;
+package com.nareun130.pragmatism.tda;
 
 public class Shop {
 
