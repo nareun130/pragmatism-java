@@ -1,4 +1,4 @@
-package com.nareun130.notoop;
+package com.nareun130.not_oop;
 
 import java.util.List;
 
