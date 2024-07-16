@@ -5,7 +5,11 @@ import lombok.AllArgsConstructor;
 //* 불변성을 보여주는 코드
 @AllArgsConstructor
 public class AccountInfo {
-    private long mileage;
+
+    //! VO에는 식별자를 넣어서는 안된다! -> 동등성과 식별자는 의미상 충돌이 생길 수 밖에 없다.
+    // private final long id; 
+    // private long mileage;
+    private final long mileage;
 
     public AccountLevel getLevel() {
         if (mileage > 100_000)
