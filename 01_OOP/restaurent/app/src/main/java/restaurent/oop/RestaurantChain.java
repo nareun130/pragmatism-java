@@ -61,20 +61,15 @@ public class RestaurantChain implements Calculable {// ! 역할을 구현
     @Getter
     class Order implements Calculable {
 
-        private List<Calculable> foods;
-        private List<BrandProduct> brandProducts;
+        List<Calculable> items;
         private double transactionFeePercent = 0.03; // 결제 수수료 3%
 
         public long calculateRevenue() {
 
             long revenue = 0;
 
-            for (Calculable food : foods) {
-                revenue += food.calculateRevenue();
-            }
-
-            for (BrandProduct brandProduct : brandProducts) {
-                revenue += brandProduct.calculateRevenue();
+            for (Calculable item : items) {
+                revenue += item.calculateRevenue();
             }
             return revenue;
         }
@@ -82,14 +77,10 @@ public class RestaurantChain implements Calculable {// ! 역할을 구현
         // 순이익 계산
         public long calculateProfit() {
             long income = 0;
-            for (Calculable food : foods) {
-                income += food.calculateProfit();
-            }
 
-            for (BrandProduct brandProduct : brandProducts) {
-                income += brandProduct.calculateProfit();
+            for (Calculable item : items) {
+                income += item.calculateProfit();
             }
-
             return (long) (income - calculateRevenue() * transactionFeePercent);
 
         }

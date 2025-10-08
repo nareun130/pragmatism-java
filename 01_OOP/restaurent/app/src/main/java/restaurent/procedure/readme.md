@@ -1,3 +1,4 @@
+# 1-1 절차지향
 ## 현재 패키지의 RestaurantChain은 절차지향적 코드
 1. RestaurantChain의 클래스와 객체들이 calculateRevenue, calculateProfit을 실행하기 위한 데이터로서 존재할 뿐.
 2. Store, Order, food 클래스는 존재하기만 할 뿐 아무런 책임이 없음. 단순 data를 실어 나르는 용도
