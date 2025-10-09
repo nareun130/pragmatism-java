@@ -1,4 +1,4 @@
-# DAO
+# 2-3 DAO
 DAO의 역할
 1. DB와의 연결을 관리
 2. DB에 연결해 data에 대한 CRUD 연산을 수행
